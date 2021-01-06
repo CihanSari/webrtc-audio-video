@@ -62,7 +62,7 @@
 
   <script>
   var hostArray = window.location.host.split(':');
-  var serverLoc = 'wss://' + hostArray[0] + ':443/'
+  var serverLoc = 'ws://' + hostArray[0] + ':8080/'
   var socket = new WebSocket(serverLoc); 
 
   var localvid = document.getElementById('localvideo');
@@ -115,7 +115,7 @@
       .then(function(stream) {
         localStream = stream;
         try {
-          localvid.src = window.URL.createObjectURL(stream);
+          localvid.srcObject = stream;
           localvid.play();
         } catch(e) {
           console.log("Error setting video src: ", e);
@@ -293,7 +293,7 @@
     // when remote adds a stream, hand it on to the local video element
     function onRemoteStreamAdded(evt) {
       console.log("Added remote stream");
-      remotevid.src = window.URL.createObjectURL(evt.stream);
+      remotevid.srcObject = evt.stream;
     }
 
     // when remote removes a stream, remove it from the local video element

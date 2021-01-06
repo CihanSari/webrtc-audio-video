@@ -1,0 +1,23 @@
+{
+  "name": "webrtc-audio-video",
+  "version": "1.0.0",
+  "description": "A simple WebRTC Audio / Video call test page using web socket transport",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CihanSari/webrtc-audio-video.git"
+  },
+  "author": "Enda Mannion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CihanSari/webrtc-audio-video/issues"
+  },
+  "homepage": "https://github.com/CihanSari/webrtc-audio-video#readme",
+  "dependencies": {
+    "websocket": "^1.0.33"
+  }
+}
